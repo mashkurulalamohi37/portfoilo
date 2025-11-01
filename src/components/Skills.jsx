@@ -41,15 +41,15 @@ const Skills = () => {
   ]
 
   return (
-    <section id="skills" className="section-padding bg-white">
+    <section id="skills" className="section-padding bg-black relative scan-line">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            My <span className="gradient-text">Skills</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-mono">
+            &gt; My <span className="gradient-text hacker-glow">Skills</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-4"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Technologies and tools I work with to bring ideas to life.
+          <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-cyan-400 mx-auto mb-4"></div>
+          <p className="text-green-500/70 max-w-2xl mx-auto font-mono">
+            $ Technologies and tools I work with to bring ideas to life.
           </p>
         </div>
 
@@ -57,19 +57,19 @@ const Skills = () => {
           {skillCategories.map((category, categoryIndex) => (
             <div
               key={categoryIndex}
-              className="bg-gradient-to-br from-gray-50 to-blue-50 p-6 rounded-xl shadow-lg"
+              className="terminal-border bg-black/50 p-6"
             >
-              <h3 className="text-2xl font-semibold mb-6 text-gray-800">{category.category}</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-green-400 font-mono hacker-glow">&gt; {category.category}</h3>
               <div className="space-y-4">
                 {category.skills.map((skill, index) => (
                   <div key={index}>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-700 font-medium">{skill.name}</span>
-                      <span className="text-gray-500 text-sm">{skill.level}%</span>
+                    <div className="flex justify-between items-center mb-2 font-mono">
+                      <span className="text-green-400 font-medium">{skill.name}</span>
+                      <span className="text-green-500/70 text-sm">[{skill.level}%]</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                    <div className="w-full bg-green-900/20 h-3 overflow-hidden border border-green-500/20">
                       <div
-                        className="h-full bg-gradient-to-r from-blue-600 to-purple-600 rounded-full transition-all duration-1000"
+                        className="h-full bg-gradient-to-r from-green-500 to-cyan-400 transition-all duration-1000 shadow-[0_0_10px_rgba(0,255,0,0.5)]"
                         style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>

@@ -9,37 +9,46 @@ const Home = () => {
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center section-padding bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-16">
-      <div className="container-custom text-center">
+    <section id="home" className="min-h-screen flex items-center justify-center section-padding bg-black pt-16 relative scan-line">
+      <div className="container-custom text-center relative z-10">
         <div className="animate-float mb-8">
-          <div className="w-40 h-40 mx-auto rounded-full overflow-hidden ring-4 ring-white shadow-2xl">
+          <div className="w-40 h-40 mx-auto rounded-full overflow-hidden ring-4 ring-green-400/50 shadow-[0_0_30px_rgba(0,255,0,0.5)] animate-pulse-glow">
             <img 
               src="/assets/profile.jpg" 
               alt="Ohi" 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300"
             />
           </div>
         </div>
         
-        <h1 className="text-5xl md:text-7xl font-bold mb-4">
-          Hi, I'm <span className="gradient-text">Ohi</span>
-        </h1>
+        <div className="font-mono mb-4">
+          <p className="text-green-400/70 text-sm md:text-lg mb-2">&gt; Initializing system...</p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-2 hacker-glow">
+            <span className="gradient-text">$ whoami</span>
+          </h1>
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 hacker-glow">
+            <span className="text-green-400">Ohi</span>
+          </h1>
+          <p className="text-green-400/50 text-xs md:text-sm">[root@portfolio ~]#</p>
+        </div>
         
-        <p className="text-2xl md:text-3xl text-gray-600 mb-6">
-          Flutter Developer & Tech Enthusiast
-        </p>
-        
-        <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto mb-12">
-          Building beautiful, performant mobile applications and exploring the latest in technology.
-          Passionate about creating user-centric solutions that make a difference.
-        </p>
+        <div className="terminal-border bg-black/50 p-4 md:p-6 mb-8 max-w-3xl mx-auto">
+          <p className="text-green-400 text-lg md:text-2xl font-mono mb-2">
+            &gt; Flutter Developer & Tech Enthusiast
+          </p>
+          <p className="text-green-500/70 text-sm md:text-base font-mono leading-relaxed">
+            $ Building beautiful, performant mobile applications and exploring the latest in technology.
+            <br />
+            $ Passionate about creating user-centric solutions that make a difference.
+          </p>
+        </div>
 
         <div className="flex justify-center space-x-6 mb-12">
           <a
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-12 h-12 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-gray-700 transition-colors shadow-lg"
+            className="w-12 h-12 rounded-full bg-green-900/50 text-green-400 flex items-center justify-center hover:bg-green-900 hover:text-green-300 transition-all border border-green-500/30 hover:border-green-400 animate-pulse-glow"
           >
             <FaGithub size={20} />
           </a>
@@ -47,7 +56,7 @@ const Home = () => {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-colors shadow-lg"
+            className="w-12 h-12 rounded-full bg-green-900/50 text-green-400 flex items-center justify-center hover:bg-green-900 hover:text-green-300 transition-all border border-green-500/30 hover:border-green-400 animate-pulse-glow"
           >
             <FaLinkedin size={20} />
           </a>
@@ -55,13 +64,13 @@ const Home = () => {
             href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-12 h-12 rounded-full bg-blue-400 text-white flex items-center justify-center hover:bg-blue-500 transition-colors shadow-lg"
+            className="w-12 h-12 rounded-full bg-green-900/50 text-green-400 flex items-center justify-center hover:bg-green-900 hover:text-green-300 transition-all border border-green-500/30 hover:border-green-400 animate-pulse-glow"
           >
             <FaTwitter size={20} />
           </a>
           <a
             href="mailto:your.email@example.com"
-            className="w-12 h-12 rounded-full bg-purple-600 text-white flex items-center justify-center hover:bg-purple-700 transition-colors shadow-lg"
+            className="w-12 h-12 rounded-full bg-green-900/50 text-green-400 flex items-center justify-center hover:bg-green-900 hover:text-green-300 transition-all border border-green-500/30 hover:border-green-400 animate-pulse-glow"
           >
             <FaEnvelope size={20} />
           </a>
@@ -69,9 +78,9 @@ const Home = () => {
 
         <button
           onClick={() => scrollToSection('projects')}
-          className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all transform hover:scale-105"
+          className="inline-flex items-center space-x-2 bg-green-900/30 text-green-400 px-8 py-4 font-mono font-semibold border border-green-500/50 hover:border-green-400 hover:bg-green-900/50 transition-all transform hover:scale-105 animate-pulse-glow"
         >
-          <span>View My Work</span>
+          <span>&gt; View My Work</span>
           <FaArrowDown />
         </button>
       </div>

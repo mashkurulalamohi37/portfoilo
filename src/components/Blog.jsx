@@ -41,15 +41,15 @@ const Blog = () => {
   ]
 
   return (
-    <section id="blog" className="section-padding bg-white">
+    <section id="blog" className="section-padding bg-black relative scan-line">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            My <span className="gradient-text">Blog</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-mono">
+            &gt; My <span className="gradient-text hacker-glow">Blog</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-4"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Thoughts, tutorials, and stories from my development journey.
+          <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-cyan-400 mx-auto mb-4"></div>
+          <p className="text-green-500/70 max-w-2xl mx-auto font-mono">
+            $ Thoughts, tutorials, and stories from my development journey.
           </p>
         </div>
 
@@ -57,37 +57,37 @@ const Blog = () => {
           {blogPosts.map((post) => (
             <article
               key={post.id}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 group cursor-pointer"
+              className="terminal-border bg-black/50 overflow-hidden hover:bg-green-900/10 transition-all duration-300 group cursor-pointer"
             >
               <div className="relative overflow-hidden h-48">
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 grayscale hover:grayscale-0"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                    {post.category}
+                  <span className="bg-green-600/80 text-green-400 px-3 py-1 font-mono text-xs font-semibold border border-green-400/50">
+                    &gt; {post.category}
                   </span>
                 </div>
               </div>
               
               <div className="p-6">
-                <div className="flex items-center text-sm text-gray-500 mb-3">
+                <div className="flex items-center text-sm text-green-500/70 mb-3 font-mono">
                   <FaCalendar className="mr-2" />
                   <span>{post.date}</span>
                   <span className="mx-2">•</span>
                   <span>{post.readTime}</span>
                 </div>
                 
-                <h3 className="text-xl font-semibold mb-3 text-gray-800 group-hover:text-blue-600 transition-colors">
-                  {post.title}
+                <h3 className="text-xl font-semibold mb-3 text-green-400 font-mono group-hover:text-green-300 transition-colors hacker-glow">
+                  &gt; {post.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-4 leading-relaxed">{post.excerpt}</p>
+                <p className="text-green-500/70 mb-4 leading-relaxed font-mono text-sm">{post.excerpt}</p>
                 
-                <button className="flex items-center space-x-2 text-blue-600 font-medium hover:text-blue-700 group-hover:translate-x-2 transition-transform">
-                  <span>Read More</span>
+                <button className="flex items-center space-x-2 text-green-400 font-medium hover:text-green-300 group-hover:translate-x-2 transition-transform font-mono text-sm">
+                  <span>&gt; Read More</span>
                   <FaArrowRight />
                 </button>
               </div>
@@ -96,8 +96,8 @@ const Blog = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl transition-all transform hover:scale-105">
-            View All Posts
+          <button className="bg-green-900/30 text-green-400 px-8 py-3 font-mono font-semibold border border-green-500/50 hover:border-green-400 hover:bg-green-900/50 transition-all transform hover:scale-105 animate-pulse-glow">
+            &gt; View All Posts
           </button>
         </div>
       </div>
@@ -106,4 +106,3 @@ const Blog = () => {
 }
 
 export default Blog
-

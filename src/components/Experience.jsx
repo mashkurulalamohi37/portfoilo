@@ -57,51 +57,51 @@ const Experience = () => {
   ]
 
   return (
-    <section id="experience" className="section-padding bg-gradient-to-br from-purple-50 to-pink-50">
+    <section id="experience" className="section-padding bg-black relative scan-line">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Experience & <span className="gradient-text">Achievements</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-mono">
+            &gt; Experience & <span className="gradient-text hacker-glow">Achievements</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-4"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            My professional journey, presentations, and notable achievements.
+          <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-cyan-400 mx-auto mb-4"></div>
+          <p className="text-green-500/70 max-w-2xl mx-auto font-mono">
+            $ My professional journey, presentations, and notable achievements.
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 via-purple-400 to-pink-400 hidden md:block"></div>
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-green-400 via-cyan-400 to-pink-400 hidden md:block"></div>
 
             <div className="space-y-12">
               {experiences.map((exp, index) => (
                 <div key={index} className="relative flex items-start">
                   {/* Icon */}
-                  <div className="relative z-10 flex-shrink-0 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                  <div className="relative z-10 flex-shrink-0 w-16 h-16 bg-black border-2 border-green-500/50 flex items-center justify-center shadow-[0_0_20px_rgba(0,255,0,0.3)]">
                     <div className={`text-2xl ${
-                      exp.type === 'work' ? 'text-blue-600' :
-                      exp.type === 'presentation' ? 'text-purple-600' :
-                      'text-pink-600'
+                      exp.type === 'work' ? 'text-green-400' :
+                      exp.type === 'presentation' ? 'text-cyan-400' :
+                      'text-pink-400'
                     }`}>
                       {exp.icon}
                     </div>
                   </div>
 
                   {/* Content */}
-                  <div className="ml-6 md:ml-8 flex-1 bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="ml-6 md:ml-8 flex-1 terminal-border bg-black/50 p-6 hover:bg-green-900/10 transition-all">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                      <h3 className="text-xl font-semibold text-gray-800">{exp.title}</h3>
-                      <span className="text-sm text-gray-500 mt-1 md:mt-0">{exp.period}</span>
+                      <h3 className="text-xl font-semibold text-green-400 font-mono hacker-glow">{exp.title}</h3>
+                      <span className="text-sm text-green-500/70 mt-1 md:mt-0 font-mono">{exp.period}</span>
                     </div>
-                    <p className="text-blue-600 font-medium mb-3">{exp.company}</p>
-                    <p className="text-gray-600 mb-4 leading-relaxed">{exp.description}</p>
+                    <p className="text-cyan-400 font-medium mb-3 font-mono">&gt; {exp.company}</p>
+                    <p className="text-green-500/70 mb-4 leading-relaxed font-mono text-sm">{exp.description}</p>
                     
                     <div className="space-y-2">
                       {exp.achievements.map((achievement, idx) => (
-                        <div key={idx} className="flex items-start">
-                          <span className="text-blue-500 mr-2">•</span>
-                          <span className="text-gray-600 text-sm">{achievement}</span>
+                        <div key={idx} className="flex items-start font-mono text-sm">
+                          <span className="text-green-400 mr-2">$</span>
+                          <span className="text-green-500/70">{achievement}</span>
                         </div>
                       ))}
                     </div>
@@ -117,4 +117,3 @@ const Experience = () => {
 }
 
 export default Experience
-
