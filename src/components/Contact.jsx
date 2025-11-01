@@ -55,7 +55,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-light text-emerald-400/90 mb-1 text-sm">Location</h4>
-                  <p className="text-emerald-400/60 font-light text-sm">Your City, Country</p>
+                  <p className="text-emerald-400/60 font-light text-sm">Rangpur,Bangladesh</p>
                 </div>
               </div>
 
@@ -66,7 +66,7 @@ const Contact = () => {
                 <div>
                   <h4 className="font-light text-cyan-400/90 mb-1 text-sm">Email</h4>
                   <a href="mailto:your.email@example.com" className="text-emerald-400/70 hover:text-emerald-400 font-light text-sm transition-colors">
-                    your.email@example.com
+                    mashkurulalam7@gmail.com
                   </a>
                 </div>
               </div>
@@ -77,7 +77,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-light text-pink-400/90 mb-1 text-sm">Phone</h4>
-                  <p className="text-emerald-400/60 font-light text-sm">+1 (234) 567-8900</p>
+                  <p className="text-emerald-400/60 font-light text-sm">+8801609024005</p>
                 </div>
               </div>
             </div>
@@ -86,7 +86,7 @@ const Contact = () => {
               <h4 className="font-light text-emerald-400/90 mb-4 text-sm">Follow Me</h4>
               <div className="flex space-x-3">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/mashkurulalamohi37"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-lg bg-[#0f0f0f]/60 text-emerald-400/80 flex items-center justify-center hover:bg-emerald-500/10 hover:text-emerald-400 transition-all border border-emerald-500/20 hover:border-emerald-500/40"
@@ -94,7 +94,7 @@ const Contact = () => {
                   <FaGithub size={16} />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="linkedin.com/in/mashkurul-alam-ohi-b978371a5"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-lg bg-[#0f0f0f]/60 text-emerald-400/80 flex items-center justify-center hover:bg-emerald-500/10 hover:text-emerald-400 transition-all border border-emerald-500/20 hover:border-emerald-500/40"
