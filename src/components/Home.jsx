@@ -1,6 +1,28 @@
+import { useState, useEffect, useRef } from 'react'
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowDown } from 'react-icons/fa'
 
 const Home = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const profileRef = useRef(null)
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      if (profileRef.current) {
+        const rect = profileRef.current.getBoundingClientRect()
+        const centerX = rect.left + rect.width / 2
+        const centerY = rect.top + rect.height / 2
+        
+        const x = ((e.clientX - centerX) / rect.width) * 20 // Max 20px movement
+        const y = ((e.clientY - centerY) / rect.height) * 20
+        
+        setMousePosition({ x, y })
+      }
+    }
+
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [])
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -11,12 +33,31 @@ const Home = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center section-padding bg-[#0a0a0a] pt-16 relative scan-line">
       <div className="container-custom text-center relative z-10">
-        <div className="animate-float mb-12">
-          <div className="w-36 h-36 mx-auto rounded-full overflow-hidden ring-2 ring-emerald-500/30 shadow-[0_0_40px_rgba(16,185,129,0.3)]">
+        <div className="animate-float mb-12 relative">
+          <div 
+            ref={profileRef}
+            className="w-36 h-36 mx-auto rounded-full overflow-hidden ring-2 ring-emerald-500/30 cursor-pointer transition-all duration-300 ease-out relative z-10"
+            style={{
+              transform: `translate(${mousePosition.x}px, ${mousePosition.y}px) rotateX(${mousePosition.y * 0.15}deg) rotateY(${mousePosition.x * 0.15}deg)`,
+              boxShadow: `0 ${10 + mousePosition.y * 0.5}px ${30 + Math.abs(mousePosition.x)}px rgba(16,185,129,${0.3 + Math.abs(mousePosition.x) * 0.01})`,
+            }}
+            onMouseLeave={() => setMousePosition({ x: 0, y: 0 })}
+          >
             <img 
               src="/assets/profile.jpg" 
               alt="Ohi" 
               className="w-full h-full object-cover grayscale-[0.3] hover:grayscale-0 transition-all duration-500"
+              style={{
+                transform: `translate(${mousePosition.x * 0.3}px, ${mousePosition.y * 0.3}px) scale(${1 + Math.abs(mousePosition.x + mousePosition.y) * 0.002})`,
+              }}
+            />
+            {/* Animated glow effect */}
+            <div 
+              className="absolute inset-0 rounded-full opacity-0 pointer-events-none transition-opacity duration-300"
+              style={{
+                background: `radial-gradient(circle at ${50 + mousePosition.x * 2}% ${50 + mousePosition.y * 2}%, rgba(16,185,129,0.3), transparent 70%)`,
+                opacity: Math.abs(mousePosition.x) + Math.abs(mousePosition.y) > 2 ? 0.6 : 0,
+              }}
             />
           </div>
         </div>
