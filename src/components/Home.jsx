@@ -12,8 +12,12 @@ const Home = () => {
     <section id="home" className="min-h-screen flex items-center justify-center section-padding bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-16">
       <div className="container-custom text-center">
         <div className="animate-float mb-8">
-          <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-5xl font-bold shadow-xl">
-            OH
+          <div className="w-40 h-40 mx-auto rounded-full overflow-hidden ring-4 ring-white shadow-2xl">
+            <img 
+              src="/assets/profile.jpg" 
+              alt="Ohi" 
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
         
