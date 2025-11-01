@@ -25,15 +25,15 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="section-padding bg-black relative scan-line">
+    <section id="contact" className="section-padding bg-[#0a0a0a] relative">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-mono">
-            &gt; Get In <span className="gradient-text hacker-glow">Touch</span>
+          <h2 className="text-4xl md:text-5xl font-light mb-4 font-mono tracking-tight">
+            Get In <span className="gradient-text">Touch</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-cyan-400 mx-auto mb-4"></div>
-          <p className="text-green-500/70 max-w-2xl mx-auto font-mono">
-            $ Have a project in mind or just want to chat? I'd love to hear from you!
+          <div className="w-20 h-px bg-gradient-to-r from-transparent via-emerald-400/50 to-transparent mx-auto mt-4"></div>
+          <p className="text-emerald-400/60 max-w-2xl mx-auto font-light text-sm mt-6 tracking-wide">
+            Have a project in mind or just want to chat? I'd love to hear from you!
           </p>
         </div>
 
@@ -41,84 +41,84 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold mb-6 text-green-400 font-mono hacker-glow">&gt; Let's Connect</h3>
-              <p className="text-green-500/70 mb-8 leading-relaxed font-mono text-sm">
+              <h3 className="text-xl font-light mb-6 text-emerald-400/90 font-mono tracking-wide">Let's Connect</h3>
+              <p className="text-emerald-400/60 mb-8 leading-relaxed font-light text-sm">
                 I'm always open to discussing new projects, creative ideas, or opportunities to be part of
                 your visions. Feel free to reach out through any of the channels below.
               </p>
             </div>
 
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4 terminal-border bg-black/50 p-4 hover:bg-green-900/10 transition-all">
-                <div className="bg-green-600/30 text-green-400 p-3 border border-green-500/50">
-                  <FaMapMarkerAlt size={20} />
+            <div className="space-y-4">
+              <div className="flex items-start space-x-4 terminal-border bg-[#0f0f0f]/60 p-4 hover:bg-[#0f0f0f]/80 transition-all duration-300">
+                <div className="bg-emerald-500/10 text-emerald-400/80 p-2.5 border border-emerald-500/20">
+                  <FaMapMarkerAlt size={18} />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-green-400 mb-1 font-mono">Location</h4>
-                  <p className="text-green-500/70 font-mono text-sm">&gt; Your City, Country</p>
+                  <h4 className="font-light text-emerald-400/90 mb-1 text-sm">Location</h4>
+                  <p className="text-emerald-400/60 font-light text-sm">Your City, Country</p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4 terminal-border bg-black/50 p-4 hover:bg-green-900/10 transition-all">
-                <div className="bg-cyan-600/30 text-cyan-400 p-3 border border-cyan-500/50">
-                  <FaEnvelope size={20} />
+              <div className="flex items-start space-x-4 terminal-border bg-[#0f0f0f]/60 p-4 hover:bg-[#0f0f0f]/80 transition-all duration-300">
+                <div className="bg-cyan-500/10 text-cyan-400/80 p-2.5 border border-cyan-500/20">
+                  <FaEnvelope size={18} />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-cyan-400 mb-1 font-mono">Email</h4>
-                  <a href="mailto:your.email@example.com" className="text-green-400 hover:text-green-300 font-mono text-sm transition-colors">
-                    &gt; your.email@example.com
+                  <h4 className="font-light text-cyan-400/90 mb-1 text-sm">Email</h4>
+                  <a href="mailto:your.email@example.com" className="text-emerald-400/70 hover:text-emerald-400 font-light text-sm transition-colors">
+                    your.email@example.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4 terminal-border bg-black/50 p-4 hover:bg-green-900/10 transition-all">
-                <div className="bg-pink-600/30 text-pink-400 p-3 border border-pink-500/50">
-                  <FaPhone size={20} />
+              <div className="flex items-start space-x-4 terminal-border bg-[#0f0f0f]/60 p-4 hover:bg-[#0f0f0f]/80 transition-all duration-300">
+                <div className="bg-pink-500/10 text-pink-400/80 p-2.5 border border-pink-500/20">
+                  <FaPhone size={18} />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-pink-400 mb-1 font-mono">Phone</h4>
-                  <p className="text-green-500/70 font-mono text-sm">&gt; +1 (234) 567-8900</p>
+                  <h4 className="font-light text-pink-400/90 mb-1 text-sm">Phone</h4>
+                  <p className="text-emerald-400/60 font-light text-sm">+1 (234) 567-8900</p>
                 </div>
               </div>
             </div>
 
             <div className="pt-6">
-              <h4 className="font-semibold text-green-400 mb-4 font-mono">&gt; Follow Me</h4>
-              <div className="flex space-x-4">
+              <h4 className="font-light text-emerald-400/90 mb-4 text-sm">Follow Me</h4>
+              <div className="flex space-x-3">
                 <a
                   href="https://github.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-green-900/50 text-green-400 flex items-center justify-center hover:bg-green-900 hover:text-green-300 transition-all border border-green-500/30 hover:border-green-400 animate-pulse-glow"
+                  className="w-10 h-10 rounded-lg bg-[#0f0f0f]/60 text-emerald-400/80 flex items-center justify-center hover:bg-emerald-500/10 hover:text-emerald-400 transition-all border border-emerald-500/20 hover:border-emerald-500/40"
                 >
-                  <FaGithub size={20} />
+                  <FaGithub size={16} />
                 </a>
                 <a
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-green-900/50 text-green-400 flex items-center justify-center hover:bg-green-900 hover:text-green-300 transition-all border border-green-500/30 hover:border-green-400 animate-pulse-glow"
+                  className="w-10 h-10 rounded-lg bg-[#0f0f0f]/60 text-emerald-400/80 flex items-center justify-center hover:bg-emerald-500/10 hover:text-emerald-400 transition-all border border-emerald-500/20 hover:border-emerald-500/40"
                 >
-                  <FaLinkedin size={20} />
+                  <FaLinkedin size={16} />
                 </a>
                 <a
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-green-900/50 text-green-400 flex items-center justify-center hover:bg-green-900 hover:text-green-300 transition-all border border-green-500/30 hover:border-green-400 animate-pulse-glow"
+                  className="w-10 h-10 rounded-lg bg-[#0f0f0f]/60 text-emerald-400/80 flex items-center justify-center hover:bg-emerald-500/10 hover:text-emerald-400 transition-all border border-emerald-500/20 hover:border-emerald-500/40"
                 >
-                  <FaTwitter size={20} />
+                  <FaTwitter size={16} />
                 </a>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="terminal-border bg-black/50 p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="terminal-border bg-[#0f0f0f]/60 p-8">
+            <form onSubmit={handleSubmit} className="space-y-5">
               <div>
-                <label htmlFor="name" className="block text-green-400 font-medium mb-2 font-mono">
-                  &gt; Name
+                <label htmlFor="name" className="block text-emerald-400/90 font-light mb-2 text-sm">
+                  Name
                 </label>
                 <input
                   type="text"
@@ -127,14 +127,14 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black/50 border border-green-500/30 text-green-400 font-mono focus:ring-2 focus:ring-green-500 focus:border-green-400 outline-none transition placeholder-green-500/50"
-                  placeholder="$ Enter your name"
+                  className="w-full px-4 py-3 bg-[#050505] border border-emerald-500/20 text-emerald-400/90 font-light text-sm focus:ring-1 focus:ring-emerald-500/50 focus:border-emerald-500/40 outline-none transition placeholder-emerald-400/30"
+                  placeholder="Enter your name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-green-400 font-medium mb-2 font-mono">
-                  &gt; Email
+                <label htmlFor="email" className="block text-emerald-400/90 font-light mb-2 text-sm">
+                  Email
                 </label>
                 <input
                   type="email"
@@ -143,14 +143,14 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black/50 border border-green-500/30 text-green-400 font-mono focus:ring-2 focus:ring-green-500 focus:border-green-400 outline-none transition placeholder-green-500/50"
-                  placeholder="$ your.email@example.com"
+                  className="w-full px-4 py-3 bg-[#050505] border border-emerald-500/20 text-emerald-400/90 font-light text-sm focus:ring-1 focus:ring-emerald-500/50 focus:border-emerald-500/40 outline-none transition placeholder-emerald-400/30"
+                  placeholder="your.email@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-green-400 font-medium mb-2 font-mono">
-                  &gt; Subject
+                <label htmlFor="subject" className="block text-emerald-400/90 font-light mb-2 text-sm">
+                  Subject
                 </label>
                 <input
                   type="text"
@@ -159,14 +159,14 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black/50 border border-green-500/30 text-green-400 font-mono focus:ring-2 focus:ring-green-500 focus:border-green-400 outline-none transition placeholder-green-500/50"
-                  placeholder="$ What's this about?"
+                  className="w-full px-4 py-3 bg-[#050505] border border-emerald-500/20 text-emerald-400/90 font-light text-sm focus:ring-1 focus:ring-emerald-500/50 focus:border-emerald-500/40 outline-none transition placeholder-emerald-400/30"
+                  placeholder="What's this about?"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-green-400 font-medium mb-2 font-mono">
-                  &gt; Message
+                <label htmlFor="message" className="block text-emerald-400/90 font-light mb-2 text-sm">
+                  Message
                 </label>
                 <textarea
                   id="message"
@@ -175,16 +175,16 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows="6"
-                  className="w-full px-4 py-3 bg-black/50 border border-green-500/30 text-green-400 font-mono focus:ring-2 focus:ring-green-500 focus:border-green-400 outline-none transition resize-none placeholder-green-500/50"
-                  placeholder="$ Tell me about your project or just say hello!"
+                  className="w-full px-4 py-3 bg-[#050505] border border-emerald-500/20 text-emerald-400/90 font-light text-sm focus:ring-1 focus:ring-emerald-500/50 focus:border-emerald-500/40 outline-none transition resize-none placeholder-emerald-400/30"
+                  placeholder="Tell me about your project or just say hello!"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-green-900/30 text-green-400 px-8 py-4 font-mono font-semibold border border-green-500/50 hover:border-green-400 hover:bg-green-900/50 transition-all transform hover:scale-105 animate-pulse-glow"
+                className="w-full bg-[#0f0f0f]/60 text-emerald-400/90 px-6 py-3 font-light text-sm tracking-wide border border-emerald-500/30 hover:border-emerald-500/50 hover:bg-emerald-500/5 transition-all duration-300"
               >
-                &gt; Send Message
+                Send Message
               </button>
             </form>
           </div>

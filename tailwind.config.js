@@ -7,12 +7,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        'hacker-green': '#00ff00',
-        'hacker-cyan': '#00ffff',
-        'hacker-pink': '#ff00ff',
+        'hacker-green': '#10b981',
+        'hacker-cyan': '#06b6d4',
+        'hacker-pink': '#ec4899',
+        'dark-bg': '#0a0a0a',
+        'darker-bg': '#050505',
       },
       fontFamily: {
-        'mono': ['Courier New', 'monospace'],
+        'mono': ['Consolas', 'Monaco', 'Courier New', 'monospace'],
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
@@ -28,10 +30,10 @@ export default {
         },
         'pulse-glow': {
           '0%, 100%': { 
-            boxShadow: '0 0 5px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 255, 0, 0.3)',
+            boxShadow: '0 0 10px rgba(16, 185, 129, 0.3), 0 0 20px rgba(16, 185, 129, 0.1)',
           },
           '50%': { 
-            boxShadow: '0 0 20px rgba(0, 255, 0, 0.8), 0 0 30px rgba(0, 255, 0, 0.5)',
+            boxShadow: '0 0 20px rgba(16, 185, 129, 0.5), 0 0 40px rgba(16, 185, 129, 0.2)',
           },
         },
         typing: {

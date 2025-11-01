@@ -59,15 +59,15 @@ const Projects = () => {
   ]
 
   return (
-    <section id="projects" className="section-padding bg-black relative scan-line">
+    <section id="projects" className="section-padding bg-[#0a0a0a] relative">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-mono">
-            &gt; My <span className="gradient-text hacker-glow">Projects</span>
+          <h2 className="text-4xl md:text-5xl font-light mb-4 font-mono tracking-tight">
+            My <span className="gradient-text">Projects</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-cyan-400 mx-auto mb-4"></div>
-          <p className="text-green-500/70 max-w-2xl mx-auto font-mono">
-            $ A collection of projects I've worked on, showcasing my skills and passion for development.
+          <div className="w-20 h-px bg-gradient-to-r from-transparent via-emerald-400/50 to-transparent mx-auto mt-4"></div>
+          <p className="text-emerald-400/60 max-w-2xl mx-auto font-light text-sm mt-6 tracking-wide">
+            A collection of projects I've worked on, showcasing my skills and passion for development.
           </p>
         </div>
 
@@ -75,50 +75,50 @@ const Projects = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="terminal-border bg-black/50 overflow-hidden hover:bg-green-900/10 transition-all duration-300 group"
+              className="terminal-border bg-[#0f0f0f]/60 overflow-hidden hover:bg-[#0f0f0f]/80 transition-all duration-300 group"
             >
               <div className="relative overflow-hidden h-48">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 grayscale hover:grayscale-0"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 grayscale-[0.5] group-hover:grayscale-0"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-green-900/90 via-green-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-green-400 font-mono hacker-glow">{project.title}</h3>
-                <p className="text-green-500/70 mb-4 text-sm leading-relaxed font-mono">{project.description}</p>
+                <h3 className="text-lg font-light mb-3 text-emerald-400/90 font-mono tracking-wide">{project.title}</h3>
+                <p className="text-emerald-400/60 mb-4 text-sm leading-relaxed font-light">{project.description}</p>
                 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-5">
                   {project.tech.map((tech, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-green-900/30 text-green-400 text-xs font-mono border border-green-500/30"
+                      className="px-2.5 py-1 bg-emerald-500/10 text-emerald-400/80 text-xs font-light border border-emerald-500/20"
                     >
-                      &gt; {tech}
+                      {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex space-x-4 font-mono text-sm">
+                <div className="flex space-x-5 text-xs">
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-green-400 hover:text-green-300 transition-colors"
+                    className="flex items-center space-x-2 text-emerald-400/70 hover:text-emerald-400 transition-colors font-light"
                   >
                     <FaGithub />
-                    <span>&gt; Code</span>
+                    <span>Code</span>
                   </a>
                   <a
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-green-400 hover:text-green-300 transition-colors"
+                    className="flex items-center space-x-2 text-emerald-400/70 hover:text-emerald-400 transition-colors font-light"
                   >
                     <FaExternalLinkAlt />
-                    <span>&gt; Demo</span>
+                    <span>Demo</span>
                   </a>
                 </div>
               </div>

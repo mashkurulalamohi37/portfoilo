@@ -2,78 +2,74 @@ import { FaGraduationCap, FaCode, FaHeart } from 'react-icons/fa'
 
 const About = () => {
   return (
-    <section id="about" className="section-padding bg-black relative scan-line">
+    <section id="about" className="section-padding bg-[#0a0a0a] relative">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-mono">
-            &gt; About <span className="gradient-text hacker-glow">Me</span>
+          <h2 className="text-4xl md:text-5xl font-light mb-4 font-mono tracking-tight">
+            About <span className="gradient-text">Me</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-cyan-400 mx-auto"></div>
+          <div className="w-20 h-px bg-gradient-to-r from-transparent via-emerald-400/50 to-transparent mx-auto mt-4"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="terminal-border bg-black/50 p-6">
-            <h3 className="text-2xl font-semibold mb-4 text-green-400 font-mono hacker-glow">$ My Story</h3>
-            <div className="space-y-4 font-mono text-green-500/80 text-sm leading-relaxed">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="terminal-border bg-[#0f0f0f]/60 p-8">
+            <h3 className="text-xl font-light mb-6 text-emerald-400/90 font-mono tracking-wide">My Story</h3>
+            <div className="space-y-4 text-emerald-400/70 text-sm leading-relaxed font-light">
               <p>
-                &gt; Welcome to my portfolio! I'm a passionate Flutter developer with a love for creating
+                Welcome to my portfolio! I'm a passionate Flutter developer with a love for creating
                 beautiful and functional mobile applications.
               </p>
               <p>
-                &gt; My journey in tech started with curiosity and has evolved into a full-fledged career 
+                My journey in tech started with curiosity and has evolved into a full-fledged career 
                 dedicated to crafting exceptional user experiences.
               </p>
               <p>
-                &gt; When I'm not coding, you'll find me exploring new technologies, contributing to open-source
+                When I'm not coding, you'll find me exploring new technologies, contributing to open-source
                 projects, or sharing knowledge at tech conferences.
-              </p>
-              <p>
-                &gt; My goal is to build applications that not only solve real problems but also bring joy
-                to users.
               </p>
             </div>
           </div>
 
-          <div className="space-y-6">
-            <div className="terminal-border bg-green-900/10 p-6 hover:bg-green-900/20 transition-all">
+          <div className="space-y-5">
+            <div className="terminal-border bg-[#0f0f0f]/60 p-5 hover:bg-[#0f0f0f]/80 transition-all duration-300">
               <div className="flex items-start space-x-4">
-                <div className="bg-green-600/30 text-green-400 p-3 border border-green-500/50">
-                  <FaGraduationCap size={24} />
+                <div className="bg-emerald-500/10 text-emerald-400/80 p-3 border border-emerald-500/20">
+                  <FaGraduationCap size={20} />
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-xl font-semibold mb-2 text-green-400 font-mono">Education</h4>
-                  <p className="text-green-500/70 font-mono text-sm">
-                    &gt; Bachelor's in Computer Science<br />
-                    <span className="text-green-600/60">Your University, 2020-2024</span>
+                  <h4 className="text-base font-light mb-2 text-emerald-400/90 font-mono">Education</h4>
+                  <p className="text-emerald-400/60 text-sm font-light">
+                    Bachelor's in Computer Science<br />
+                    <span className="text-emerald-400/40">Your University, 2020-2024</span>
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="terminal-border bg-cyan-900/10 p-6 hover:bg-cyan-900/20 transition-all">
+            <div className="terminal-border bg-[#0f0f0f]/60 p-5 hover:bg-[#0f0f0f]/80 transition-all duration-300">
               <div className="flex items-start space-x-4">
-                <div className="bg-cyan-600/30 text-cyan-400 p-3 border border-cyan-500/50">
-                  <FaCode size={24} />
+                <div className="bg-cyan-500/10 text-cyan-400/80 p-3 border border-cyan-500/20">
+                  <FaCode size={20} />
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-xl font-semibold mb-2 text-cyan-400 font-mono">What I Do</h4>
-                  <p className="text-cyan-500/70 font-mono text-sm">
-                    &gt; Developing cross-platform mobile applications using Flutter,
+                  <h4 className="text-base font-light mb-2 text-cyan-400/90 font-mono">What I Do</h4>
+                  <p className="text-cyan-400/60 text-sm font-light">
+                    Developing cross-platform mobile applications using Flutter,
                     creating seamless user experiences across iOS and Android.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="terminal-border bg-pink-900/10 p-6 hover:bg-pink-900/20 transition-all">
+            <div className="terminal-border bg-[#0f0f0f]/60 p-5 hover:bg-[#0f0f0f]/80 transition-all duration-300">
               <div className="flex items-start space-x-4">
-                <div className="bg-pink-600/30 text-pink-400 p-3 border border-pink-500/50">
-                  <FaHeart size={24} />
+                <div className="bg-pink-500/10 text-pink-400/80 p-3 border border-pink-500/20">
+                  <FaHeart size={20} />
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-xl font-semibold mb-2 text-pink-400 font-mono">Interests</h4>
-                  <p className="text-pink-500/70 font-mono text-sm">
-                    &gt; Mobile Development • UI/UX Design • Open Source • Tech Blogging • 
+                  <h4 className="text-base font-light mb-2 text-pink-400/90 font-mono">Interests</h4>
+                  <p className="text-pink-400/60 text-sm font-light">
+                    Mobile Development • UI/UX Design • Open Source • Tech Blogging • 
                     Conference Speaking • Machine Learning
                   </p>
                 </div>

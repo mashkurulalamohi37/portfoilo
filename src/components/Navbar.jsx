@@ -23,15 +23,14 @@ const Navbar = ({ activeSection }) => {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-green-500/30 scan-line">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-xl border-b border-emerald-500/10">
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
           <button
             onClick={() => scrollToSection('home')}
-            className="text-2xl font-bold font-mono gradient-text hacker-glow"
-            data-text="> PORTFOLIO.exe"
+            className="text-lg font-light font-mono gradient-text tracking-wider"
           >
-            &gt; PORTFOLIO.exe
+            Portfolio
           </button>
 
           {/* Desktop Menu */}
@@ -40,13 +39,13 @@ const Navbar = ({ activeSection }) => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`font-mono text-sm transition-all duration-200 ${
+                className={`font-mono text-xs font-light tracking-wide transition-all duration-300 ${
                   activeSection === item.id
-                    ? 'text-green-400 font-bold hacker-glow'
-                    : 'text-green-600/70 hover:text-green-400'
+                    ? 'text-emerald-400 border-b border-emerald-400/50 pb-1'
+                    : 'text-emerald-400/60 hover:text-emerald-400'
                 }`}
               >
-                &gt; {item.label}
+                {item.label}
               </button>
             ))}
           </div>
@@ -54,26 +53,26 @@ const Navbar = ({ activeSection }) => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-green-400 hover:text-green-300"
+            className="md:hidden text-emerald-400/80 hover:text-emerald-400 transition-colors"
           >
-            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden py-4 space-y-2 border-t border-green-500/30">
+          <div className="md:hidden py-4 space-y-1 border-t border-emerald-500/10">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className={`block w-full text-left px-4 py-2 font-mono text-sm transition-colors ${
                   activeSection === item.id
-                    ? 'bg-green-500/20 text-green-400 font-bold border-l-2 border-green-400'
-                    : 'text-green-600/70 hover:bg-green-500/10 hover:text-green-400'
+                    ? 'bg-emerald-500/10 text-emerald-400 border-l-2 border-emerald-400/50'
+                    : 'text-emerald-400/70 hover:bg-emerald-500/5 hover:text-emerald-400'
                 }`}
               >
-                &gt; {item.label}
+                {item.label}
               </button>
             ))}
           </div>
