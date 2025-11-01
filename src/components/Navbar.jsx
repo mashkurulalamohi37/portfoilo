@@ -10,7 +10,6 @@ const Navbar = ({ activeSection }) => {
     { id: 'projects', label: 'Projects' },
     { id: 'skills', label: 'Skills' },
     { id: 'experience', label: 'Experience' },
-    { id: 'blog', label: 'Blog' },
     { id: 'contact', label: 'Contact' },
   ]
 
