@@ -117,7 +117,7 @@ const Skills = () => {
               className="terminal-border bg-[#0f0f0f]/60 p-8 hover:bg-[#0f0f0f]/80 transition-all duration-300 group"
             >
               <div className="flex items-center gap-3 mb-6">
-                <span className="text-2xl">{category.icon}</span>
+                <span className="text-4xl">{category.icon}</span>
                 <h3 className="text-xl font-light text-emerald-400/90 font-mono tracking-wide">
                   {category.category}
                 </h3>
@@ -133,8 +133,8 @@ const Skills = () => {
                       className="group/skill hover:scale-[1.02] transition-transform duration-300"
                     >
                       <div className="flex justify-between items-center mb-3">
-                        <div className="flex items-center gap-2">
-                          <span className="text-lg opacity-70 group-hover/skill:opacity-100 transition-opacity">
+                        <div className="flex items-center gap-3">
+                          <span className="text-2xl opacity-70 group-hover/skill:opacity-100 transition-opacity">
                             {skill.icon}
                           </span>
                           <span className="text-emerald-400/90 font-light text-sm tracking-wide">
@@ -146,7 +146,7 @@ const Skills = () => {
                             {isVisible ? skill.level : 0}%
                           </span>
                           {skill.level >= 85 && (
-                            <span className="text-xs text-emerald-400/60">⭐</span>
+                            <span className="text-sm text-emerald-400/60">⭐</span>
                           )}
                         </div>
                       </div>
