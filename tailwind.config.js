@@ -22,6 +22,7 @@ export default {
         'typing': 'typing 3.5s steps(40, end)',
         'blink': 'blink 1s step-end infinite',
         'matrix-rain': 'matrix-rain 20s linear infinite',
+        'shimmer': 'shimmer 2s linear infinite',
       },
       keyframes: {
         float: {
@@ -47,6 +48,10 @@ export default {
         'matrix-rain': {
           '0%': { transform: 'translateY(-100%)' },
           '100%': { transform: 'translateY(100vh)' },
+        },
+        shimmer: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
         },
       }
     },
